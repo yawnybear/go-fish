@@ -11,7 +11,7 @@
       <nav class="sidebar sidebar--drawer">
         <a class="sidebar--brand">Go Fish</a>
         <div class="sidebar__content sidebar__content--start">
-          <div class="btn btn--no-border">Games</div>
+          <div class="btn btn--active btn--no-border">Games</div>
           <div class="btn btn--no-border">Stats</div>
         </div>
         <div class="sidebar__content sidebar__content--end">
@@ -22,36 +22,49 @@
       </nav>
       <div class="app-body">
         <div class="app__content">
-          <div class="left-col">
+          <div class="app__content--left-col">
             Players
             <div class="card">
-              <div class="card__body">
+              <div class="card__body.card__body--accordion">
                 <details class="accordion">
                   <summary class="summary__start">
                     <div class="accordion__label">Player 1</div>
                     <div class="accordion__label">Cards: 7</div>
                     <div class="accordion__label">Books: 0</div>
-                    <div class="accordion__marker">&gt;</div>
+                    <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
                   </summary>
-                  <summary>Description</summary>
+                  <summary class="summary__end">
+                    <div class="game-card game-card--small">A</div>
+                    <div class="game-card game-card--small">Q</div>
+                  </summary>
                 </details>
               </div>
             </div>
           </div>
-          <div class="right-col">
+          <div class="app__content--right-col">
             Game Feed
             <div class="side-panel">
-              <div class="side-panel__body--padded">
+              <div class="side-panel__body">
                 Scott asks Hunter if they have any 8s
               </div>
-              <textarea class="form-control"></textarea>
+              <div class="side-panel__footer">
+                <textarea class="form-control" placeholder="Send a message"></textarea>
+              </div>
             </div>
           </div>
         </div>
         <div class="app__footer">
           <div class="footer__header">Hand</div>
-          <div class="footer__content">
-            Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Its purpose is to permit a page layout to be designed, independently of the copy that will subsequently populate it, or to demonstrate various fonts of a typeface without meaningful text that could be distracting. Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and 
+          <div class="footer__body">
+            <div class="footer__body--left-col">
+              <div class="game-card"></div>
+              <div class="game-card"></div>
+            </div>
+            <div class="footer__body--right-col">
+              <div class="game-card">A</div>
+              <div class="game-card">Q</div>
+              <div class="game-card">3</div>
+            </div>
           </div>
         </div>
       </div>
