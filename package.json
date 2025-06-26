@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@rolemodel/optics": "^2.1.3"
+  }
+}
