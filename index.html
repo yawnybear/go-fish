@@ -6,113 +6,107 @@
     <link rel="stylesheet" href="https://unpkg.com/@rolemodel/optics/dist/css/optics.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
-  <body>
-    <div class="app-with-sidebar">
-      <nav class="sidebar sidebar--drawer">
-        <a class="sidebar--brand">Go Fish</a>
-        <div class="sidebar__content sidebar__content--start">
-          <div class="btn btn--active btn--no-border">Games</div>
-          <div class="btn btn--no-border">Stats</div>
-        </div>
-        <div class="sidebar__content sidebar__content--end">
-          <div class="divider"></div>
-          <div class="btn btn--no-border">Profile</div>
-          <div class="btn btn--no-border">Log Out</div>
-        </div>
-      </nav>
-      <div class="app-body">
-        <div class="app__content">
-          <div class="app__content--left-col">
-            Players
-            <div class="card">
-              <div class="card__body.card__body--accordion">
-                <details class="accordion">
-                  <summary class="summary__start">
-                    <div class="summary__label">Player 1</div>
-                    <div class="summary__label">Cards: 7</div>
-                    <div class="summary__label">Books: 0</div>
-                    <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
-                  </summary>
-                  <summary class="summary__end">
-                    <div class="game-card game-card--small">A</div>
-                    <div class="game-card game-card--small">Q</div>
-                  </summary>
-                </details>
-              </div>
-              <details class="accordion">
-                <summary class="summary__start">
-                  <div class="summary__label">Player 2</div>
-                  <div class="summary__label">Cards: 5</div>
-                  <div class="summary__label">Books: 2</div>
-                  <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
-                </summary>
-                <summary class="summary__end">
-                  <div class="game-card game-card--small">A</div>
-                  <div class="game-card game-card--small">Q</div>
-                </summary>
-              </details>
-              <details class="accordion">
-                <summary class="summary__start">
-                  <div class="summary__label">Player 3</div>
-                  <div class="summary__label">Cards: 2</div>
-                  <div class="summary__label">Books: 3</div>
-                  <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
-                </summary>
-                <summary class="summary__end">
-                  <div class="game-card game-card--small">A</div>
-                  <div class="game-card game-card--small">Q</div>
-                </summary>
-              </details>
-              <details class="accordion">
-                <summary class="summary__start">
-                  <div class="summary__label">Player 4</div>
-                  <div class="summary__label">Cards: 2</div>
-                  <div class="summary__label">Books: 7</div>
-                  <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
-                </summary>
-                <summary class="summary__end">
-                  <div class="game-card game-card--small">A</div>
-                  <div class="game-card game-card--small">Q</div>
-                </summary>
-              </details>
-              <details class="accordion">
-                <summary class="summary__start">
-                  <div class="summary__label">Player 5</div>
-                  <div class="summary__label">Cards: 1</div>
-                  <div class="summary__label">Books: 4</div>
-                  <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
-                </summary>
-                <summary class="summary__end">
-                  <div class="game-card game-card--small">A</div>
-                  <div class="game-card game-card--small">Q</div>
-                </summary>
-              </details>
+  <body class="app-with-sidebar">
+    <nav class="sidebar sidebar--drawer">
+      <a class="sidebar__brand">Go Fish</a>
+      <div class="sidebar__content sidebar__content--start">
+        <div class="btn btn--active btn--no-border">Games</div>
+        <div class="btn btn--no-border">Stats</div>
+      </div>
+      <div class="sidebar__content sidebar__content--end">
+        <div class="divider"></div>
+        <div class="btn btn--no-border">Profile</div>
+        <div class="btn btn--no-border">Log Out</div>
+      </div>
+    </nav>
+    <div class="app-body">
+      <section class="app__content">
+        <div class="app-players">
+          Players
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="summary__label">Player 1</span>
+              <span class="summary__label">Cards: 7</span>
+              <span class="summary__label">Books: 0</span>
+              <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
+            </summary>
+            <div class="accordion__content">
+              <div class="game-card game-card--small">A</div>
+              <div class="game-card game-card--small">Q</div>
             </div>
-          </div>
-          <div class="app__content--right-col">
-            Game Feed
-            <div class="side-panel">
-              <div class="side-panel__body">
-                Scott asks Hunter if they have any 8s
-              </div>
-              <div class="side-panel__footer">
-                <textarea class="form-control" placeholder="Send a message"></textarea>
-              </div>
+          </details>
+          <details class="accordion">
+            <summary class="summary__start">
+              <div class="summary__label">Player 2</div>
+              <div class="summary__label">Cards: 5</div>
+              <div class="summary__label">Books: 2</div>
+              <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
+            </summary>
+            <summary class="summary__end">
+              <div class="game-card game-card--small">A</div>
+              <div class="game-card game-card--small">Q</div>
+            </summary>
+          </details>
+          <details class="accordion">
+            <summary class="summary__start">
+              <div class="summary__label">Player 3</div>
+              <div class="summary__label">Cards: 2</div>
+              <div class="summary__label">Books: 3</div>
+              <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
+            </summary>
+            <summary class="summary__end">
+              <div class="game-card game-card--small">A</div>
+              <div class="game-card game-card--small">Q</div>
+            </summary>
+          </details>
+          <details class="accordion">
+            <summary class="summary__start">
+              <div class="summary__label">Player 4</div>
+              <div class="summary__label">Cards: 2</div>
+              <div class="summary__label">Books: 7</div>
+              <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
+            </summary>
+            <summary class="summary__end">
+              <div class="game-card game-card--small">A</div>
+              <div class="game-card game-card--small">Q</div>
+            </summary>
+          </details>
+          <details class="accordion">
+            <summary class="summary__start">
+              <div class="summary__label">Player 5</div>
+              <div class="summary__label">Cards: 1</div>
+              <div class="summary__label">Books: 4</div>
+              <span class="material-symbols-outlined icon accordion marker">arrow_right</span>
+            </summary>
+            <summary class="summary__end">
+              <div class="game-card game-card--small">A</div>
+              <div class="game-card game-card--small">Q</div>
+            </summary>
+          </details>
+        </div>
+        <div class="app-feed">
+          Game Feed
+          <div class="side-panel">
+            <div class="side-panel__body">
+              Scott asks Hunter if they have any 8s
+            </div>
+            <div class="side-panel__footer">
+              <textarea class="form-control" placeholder="Send a message"></textarea>
             </div>
           </div>
         </div>
-        <div class="app__footer">
-          <div class="footer__header">Hand</div>
-          <div class="footer__body">
-            <div class="footer__body--left-col">
-              <div class="game-card"></div>
-              <div class="game-card"></div>
-            </div>
-            <div class="footer__body--right-col">
-              <div class="game-card">A</div>
-              <div class="game-card">Q</div>
-              <div class="game-card">3</div>
-            </div>
+      </section>
+      <div class="app__footer">
+        <div class="footer__header">Hand</div>
+        <div class="footer__body">
+          <div class="footer__body--left-col">
+            <div class="game-card"></div>
+            <div class="game-card"></div>
+          </div>
+          <div class="footer__body--right-col">
+            <div class="game-card">A</div>
+            <div class="game-card">Q</div>
+            <div class="game-card">3</div>
           </div>
         </div>
       </div>
