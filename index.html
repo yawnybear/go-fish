@@ -4,11 +4,7 @@
     <title>Go Fish</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://unpkg.com/@rolemodel/optics/dist/css/optics.min.css">
-    <link rel="stylesheet" href="./styles/sidebar.css">
-    <link rel="stylesheet" href="./styles/layout.css">
-    <link rel="stylesheet" href="./styles/accordion.css">
-    <link rel="stylesheet" href="./styles/side-panel.css">
-    <link rel="stylesheet" href="./styles/game-card.css">
+    <link rel="stylesheet" href="./styles/application.css">
   </head>
   <body class="app-with-sidebar">
     <nav class="sidebar sidebar--drawer">
@@ -28,7 +24,7 @@
         <div class="app__players">
           Players
           <details class="accordion">
-            <summary class="accordion__summary">
+            <summary>
               <span class="material-symbols-outlined icon accordion__marker">arrow_right</span>
               <span class="summary__label">Player 1</span>
               <span class="summary__label">Cards: 7</span>
@@ -54,17 +50,17 @@
       </section>
       <footer class="app__footer">
         <span>Hand</span>
-        <div class="footer__content">
-          <div class="footer__body footer__body--start">
-            <div class="game-card game-card--start"></div>
-            <div class="game-card game-card--start"></div>
-            <div class="game-card game-card--start"></div>
-            <div class="game-card game-card--start"></div>
+        <div class="footer__body card-hand">
+          <div class="card-stack card-stack--top-to-bottom">
+            <div class="game-card"></div>
+            <div class="game-card"></div>
+            <div class="game-card"></div>
+            <div class="game-card"></div>
           </div>
-          <div class="footer__body footer__body--end">
-            <div class="game-card game-card--end">A</div>
-            <div class="game-card game-card--end">Q</div>
-            <div class="game-card game-card--end">3</div>
+          <div class="card-stack card-stack--bottom-to-top">
+            <div class="game-card">A</div>
+            <div class="game-card">Q</div>
+            <div class="game-card">3</div>
           </div>
         </div>
       </footer>
