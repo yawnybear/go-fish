@@ -48,6 +48,11 @@
   font-size: var(--op-font-large);
   font-weight: var(--op-font-weight-medium);
   
+  
+.footer__content {
+  display: flex;
+  flex-direction: row;
+
   .footer__body {
     display: flex;
     flex-direction: column;
@@ -67,4 +72,3 @@
     }
   }
 }
-
