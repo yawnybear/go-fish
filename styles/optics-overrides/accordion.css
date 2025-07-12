@@ -1,8 +1,9 @@
 .accordion {
-  color: var(--op-color-neutral-on-plus-six);
-  background-color: var(--op-color-neutral-plus-six);
+  color: var(--op-color-primary-on-plus-max);
+  background-color: var(--op-color-primary-plus-max);
   box-shadow: var(--op-border-all) var(--op-color-border);
   border-radius: var(--op-radius-medium);
+  width: 100%;
 
   summary {
     grid-template-columns: auto 1fr auto auto;
@@ -10,23 +11,11 @@
     background-color: var(--op-color-neutral-plus-six);
     font-size: var(--op-font-small);
     font-weight: var(--op-font-weight-normal);
-    padding: var(--op-space-small )var(--op-space-medium) var(--op-space-small) var(--op-space-small);
-
-    &:hover {
-      color: var(--op-color-alerts-notice-on-plus-six);
-      background-color: var(--op-color-alerts-notice-plus-six);
-      border-radius: var(--op-radius-medium);
-    }
-  }
-
-  .accordion__content {
-    display: flex;
-    gap: var(--op-space-x-small);
-    background-color: var(--op-color-neutral-plus-six);
-    color: var(--op-color-neutral-on-plus-six);
-    box-shadow: var(--op-border-bottom) var(--op-color-border);
-    border-radius: var(--op-radius-medium);
-    font-weight: var(--op-font-weight-normal);
-    padding: var(--op-space-small);
+    padding: var(--op-space-x-small) var(--op-space-small) var(--op-space-x-small) var(--op-space-x-small) ;
   }
 }
+
+.accordion__content {
+  padding: var(--op-space-small) var(--op-space-medium);
+}
+  

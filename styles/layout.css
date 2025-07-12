@@ -1,50 +1,61 @@
-.app__body {
+.gf-body {
   display: grid;
-  grid-row-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 3fr 1fr;
 }
 
-.app__content {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-gap: var(--op-space-large);
-  padding: var(--op-space-large) var(--op-space-3x-large) 0 var(--op-space-3x-large);
-  max-width: 100%;
-}
-
-.app__players {
+.gf-section {
   display: flex;
   flex-direction: column;
-  padding: 0 0 var(--op-space-4x-large) 0;
-  gap: var(--op-space-small);
-
-  font-size: var(--op-font-large);
-  font-weight: var(--op-font-weight-medium);
-}
-
-.app__feed {
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--op-space-small);
-
-  font-size: var(--op-font-large);
-  font-weight: var(--op-font-weight-medium);
-}
-
-.app__footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  font-size: var(--op-font-small);
+  font-weight: var(--op-font-weight-medium);
+  
+  &.gf-section__game-board {
+    color: var(--op-color-neutral-on-plus-max);
+    background-color: var(--op-color-neutral-plus-max);
+    box-shadow: inset 0 0 var(--op-color-border) 0;
+    font-size: var(--op-font-large);
+  }
+  
+  &.gf-section__game-feed {
+    color: var(--op-color-primary-on-plus-eight);
+    background-color: var(--op-color-primary-plus-eight);
+  }
+  
+  &.gf-section__your-hand {
+    color: var(--op-color-neutral-on-plus-eight);
+    background-color: var(--op-color-neutral-plus-eight);
+    font-size: var(--op-font-small);
+    font-weight: var(--op-font-weight-medium);
+    box-shadow: inset var(--op-border-left) var(--op-color-border);
+  }
+}
 
+.gf-section__header {
+  display: flex;
+  align-items: center;
+  gap: var(--op-space-x-small);
+  padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
+  height: auto;
+  box-shadow: var(--op-border-bottom) var(--op-color-border);
+  
+  &.gf-section__header--space-between {
+    justify-content: space-between;
+  }
+}
+
+.gf-section__body {
   display: flex;
   flex-direction: column;
-  padding: var(--op-space-large);
-  gap: var(--op-space-medium);
-
-  background-color: var(--op-color-neutral-plus-six);
-  box-shadow: var(--op-border-all) var(--op-color-border);
-
-  font-size: var(--op-font-large);
-  font-weight: var(--op-font-weight-medium);
+  gap: var(--op-space-x-small);
+  padding: var(--op-space-medium);
+  
+  &.gf-section__body--expanded {
+    padding: var(--op-space-3x-large);
+  }
+  
+  &.gf-section__body--space-between; {
+    flex-direction: column;  
+  } 
 }
