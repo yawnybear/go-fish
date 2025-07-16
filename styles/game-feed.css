@@ -1,0 +1,58 @@
+.game-actions {
+  background-color: var(--op-color-primary-plus-seven);
+  border-radius: var(--op-radius-large);
+  box-shadow: var(--op-border-all) var(--op-color-primary-plus-six);
+  color: var(--op-color-primary-on-plus-seven);
+  display: flex;
+  flex-direction: column;
+  gap: var(--op-space-small);
+  padding: var(--op-space-small);
+  
+  .game-actions__options {
+    display: flex;
+    gap: var(--op-space-small);
+    
+    .form-group {
+      gap: var(--op-space-2x-small);
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
+
+.player-action {
+  color: var(--op-color-primary-on-plus-five-alt);
+  background-color: var(--op-color-primary-plus-five);
+  box-shadow: var(--op-border-all) var(--op-color-primary-plus-six);
+  border-radius: var(--op-radius-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--op-space-small);
+  padding: var(--op-space-small);
+}
+
+.game-response-container {
+  align-items: center;
+  display: flex;
+  gap: var(--op-space-small);
+  width: auto;
+}
+
+.game-response {
+  background-color: var(--op-color-primary-plus-max);
+  color: var(--op-color-primary-on-plus-max);
+  border-radius: var(--op-radius-large);
+  box-shadow: var(--op-border-all) var(--op-color-primary-plus-seven);
+  flex-grow: 1;
+  padding: var(--op-space-small);
+  
+  &.game-response--warning {
+    background-color: var(--op-color-alerts-warning-plus-seven);
+    border-radius: var(--op-radius-large);
+    box-shadow: var(--op-border-all) var(--op-color-alerts-warning-plus-five);
+    color: var(--op-color-alerts-warning-on-plus-seven-alt);
+    flex-grow: 1;
+    padding: var(--op-space-small);
+  } 
+}
+

@@ -13,14 +13,6 @@
   box-shadow: var(--op-border-all) var(--op-color-neutral-plus-two);
   border-radius: var(--op-radius-medium);
 
-  /* &.game-card--start {
-    margin-right: calc(var(--op-space-scale-unit) * -10);
-  }
-
-  &.game-card--end {
-    margin-left: calc(var(--op-space-scale-unit) * -10);
-  } */
-
   &.game-card--small {
     height: var(--gf-game-card-height-small);
     width: var(--gf-game-card-width-small);

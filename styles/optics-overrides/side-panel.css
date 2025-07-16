@@ -1,9 +1,0 @@
-.side-panel {
-  justify-content: space-between;
-  border-radius: var(--op-radius-medium);
-  box-shadow: var(--op-border-all) var(--op-color-border);
-  font-size: var(--op-font-medium);
-  font-weight: var(--op-font-weight-normal);
-  padding: var(--op-space-large);
-  width: 100%;
-}
