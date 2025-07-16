@@ -1,8 +1,8 @@
 .accordion {
-  color: var(--op-color-primary-on-plus-max);
   background-color: var(--op-color-primary-plus-max);
-  box-shadow: var(--op-border-all) var(--op-color-border);
   border-radius: var(--op-radius-medium);
+  box-shadow: var(--op-border-all) var(--op-color-border);
+  color: var(--op-color-primary-on-plus-max);
   width: 100%;
 
   summary {
@@ -17,21 +17,21 @@
   }
   
   .accordion__content {
-    padding: var(--op-space-small) var(--op-space-medium);
-    color: var(--op-color-primary-on-plus-eight);
     background-color: var(--op-color-neutral-plus-eight);
     box-shadow: var(--op-border-all) var(--op-color-primary-plus-four);
+    color: var(--op-color-primary-on-plus-eight);
+    padding: var(--op-space-small) var(--op-space-medium);
   }
 }
 
 details[open] {
-  color: var(--op-color-primary-on-plus-eight);
   background-color: var(--op-color-primary-plus-eight);
   box-shadow: var(--op-border-all) var(--op-color-primary-plus-four);
+  color: var(--op-color-primary-on-plus-eight);
   
   details[open] summary {
-    color: var(--op-color-primary-on-plus-eight);
     background-color: var(--op-color-primary-plus-eight);
     box-shadow: var(--op-border-all) var(--op-color-primary-plus-four);
+    color: var(--op-color-primary-on-plus-eight);
   }
 }

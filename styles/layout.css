@@ -19,31 +19,29 @@
   }
   
   &.section--game-feed {
-    color: var(--op-color-primary-on-plus-eight);
     background-color: var(--op-color-primary-plus-eight);
     box-shadow: var(--op-border-left) var(--op-color-border);
+    color: var(--op-color-primary-on-plus-eight);
   }
   
   &.section--your-hand {
-    color: var(--op-color-neutral-on-plus-eight);
     background-color: var(--op-color-neutral-plus-eight);
+    color: var(--op-color-neutral-on-plus-eight);
   }
   
   &.section--books {
-    color: var(--op-color-neutral-on-plus-eight);
     background-color: var(--op-color-neutral-plus-eight);
     box-shadow: var(--op-border-left) var(--op-color-border);
+    color: var(--op-color-neutral-on-plus-eight);
   }
 }
 
 .section__header {
-  display: flex;
-  padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
-  
   align-items: center;
   box-shadow: var(--op-border-top) var(--op-color-border), var(--op-border-bottom) var(--op-color-border);
+  display: flex;
   gap: var(--op-space-x-small);
-  height: auto;
+  padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
   
   &.section__header--expanded {
     height: var(--op-space-4x-large);
