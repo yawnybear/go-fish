@@ -1,29 +1,33 @@
+.player-hand {
+  display: flex;
+}
+
 .game-card {
+  --gf-game-card-overlap-small: -3rem;
+  --gf-game-card-overlap-large: -8rem;
   --gf-game-card-height-small: calc(var(--op-space-scale-unit) * 8);
   --gf-game-card-height-large: calc(var(--op-space-scale-unit) * 16);
   --gf-game-card-width-small: calc(var(--op-space-scale-unit) * 6);
   --gf-game-card-width-large: calc(var(--op-space-scale-unit) * 12);
 
-  background-color: var(--op-color-neutral-plus-five);
+  background-color: var(--op-color-neutral-plus-eight);
   border-radius: var(--op-radius-medium);
-  box-shadow: var(--op-border-all) var(--op-color-neutral-plus-two);
-  color: var(--op-color-neutral-on-plus-five);
+  box-shadow: var(--op-border-all) var(--op-color-neutral-plus-four), var(--op-shadow-small);
+  color: var(--op-color-neutral-on-plus-eight);
   display: flex;
   height: var(--gf-game-card-height-large);
+  margin-left: var(--gf-game-card-overlap-large);
   padding: var(--op-space-x-small) var(--op-space-small);
   width: var(--gf-game-card-width-large);
 
   &.game-card--small {
+    box-shadow: var(--op-border-all) var(--op-color-neutral-plus-four), var(--op-shadow-x-small);
     font-size: var(--op-font-x-small);
     height: var(--gf-game-card-height-small);
-    margin: 0;
+    margin-left: var(--gf-game-card-overlap-small);
     padding: var(--op-space-3x-small) var(--op-space-2x-small);
     width: var(--gf-game-card-width-small);
   }
-}
-
-.card-hand {
-  display: flex;
 }
 
 .card-stack {
@@ -31,13 +35,16 @@
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-
-  /* Layout Overrides˘ */
-  &.card-stack--top-to-bottom {
+  
+  :first-child {
+    margin: 0;
+  }
+  
+  &.card-stack--start {
     justify-content: start;
   }
-
-  &.card-stack--bottom-to-top {
+  
+  &.card-stack--end {
     justify-content: end;
   }
 }

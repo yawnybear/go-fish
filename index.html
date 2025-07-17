@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="./styles/application.css">
   </head>
   <body class="app__body">
-    <section class="section section--game-board">
-      <div class="section__header section__header--expanded">
+    <section class="panel panel--game-board">
+      <div class="panel__header">
         <button class="btn btn--icon btn--pill btn--no-border"><span class="material-symbols-outlined icon">arrow_back</span></button>
         <span>Game Board</span> 
       </div>
-      <div class="section__body section__body--expanded">
+      <div class="panel__body">
         <span>Players</span>
         <details class="accordion">
           <summary>
@@ -22,29 +22,38 @@
             <span class="accordion__label">Books: 2</span>
           </summary>
           <div class="accordion__content">
-            <!-- CONTENT HERE -->
+            <div class="player-hand">
+              <div class="card-stack card-stack--start">
+                <div class="game-card game-card--small"></div>
+                <div class="game-card game-card--small"></div>
+                <div class="game-card game-card--small"></div>
+              </div>
+              <div class="card-stack card-stack--end">
+                <div class="game-card game-card--small">A</div>
+                <div class="game-card game-card--small">J</div>
+              </div>
+            </div>
           </div>
         </details>
       </div>
     </section>
-    <section class="section section--game-feed">
-      <div class="section__header section__header--expanded section__header--x-space-between">
+    <section class="panel panel--game-feed">
+      <div class="panel__header panel__header--alt">
         <span>Game Feed</span>
         <span class="badge badge--primary">Your Turn</span> 
       </div>
-      <div class="section__body">
+      <div class="panel__body panel__body--alt">
         <span class="player-action">Jullian Asked Dominic for any 8s</span>
-        <div class="game-response-container">
+        <div class="game-response">
           <span class="material-symbols-outlined icon">subdirectory_arrow_right</span>
-          <span class="game-response game-response--warning">Go Fish: Dominic doesn’t have any 8s</span>
+          <span class="game-response__notification game-response__notification--warning">Go Fish: Dominic doesn’t have any 8s</span>
         </div>
-        <div class="game-response-container">
+        <div class="game-response">
           <span class="material-symbols-outlined icon">subdirectory_arrow_right</span>
-          <span class="game-response">You drew a 7 of Diamonds</span>
+          <span class="game-response__notification">You drew a 7 of Diamonds</span>
         </div>
-        
       </div>
-      <div class="section__footer">
+      <div class="panel__footer">
         <div class="game-actions"> 
           <div class="game-actions__options">
             <div class="form-group">
@@ -78,20 +87,36 @@
         </div> 
       </div>
     </section>
-    <section class="section section--your-hand">
-      <div class="section__header">
+    <section class="panel panel--your-hand">
+      <div class="panel__header">
         <span>Your Hand</span> 
       </div>
-      <div class="section__body">
-         <!-- CONTENT HERE -->
+      <div class="panel__body panel__body--alt">
+        <div class="player-hand">
+          <div class="card-stack card-stack--start">
+            <div class="game-card">K</div>
+            <div class="game-card">Q</div>
+            <div class="game-card">2</div>
+            <div class="game-card">9</div>
+          </div>
+          <div class="card-stack card-stack--end">
+            <div class="game-card">A</div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="section section--books">
-      <div class="section__header">
+    <section class="panel panel--books">
+      <div class="panel__header">
         <span>Books</span> 
       </div>
-      <div class="section__body">
-         <!-- CONTENT HERE -->
+      <div class="panel__body panel__body--alt">
+        <div class="player-hand">
+          <div class="card-stack card-stack--start">
+            <div class="game-card">A</div>
+            <div class="game-card">7</div>
+            <div class="game-card">3</div>
+          </div>
+        </div>
       </div>
     </section>
   </body>

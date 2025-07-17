@@ -4,68 +4,67 @@
   grid-template-rows: 3fr 1fr;
 }
 
-.section {
+.panel {
   display: flex;
   flex-direction: column;
   font-size: var(--op-font-small);
   font-weight: var(--op-font-weight-medium);
   width: 100%;
   
-  &.section--game-board {
+  &.panel--game-board {
     background-color: var(--op-color-neutral-plus-max);
     color: var(--op-color-neutral-on-plus-max);
     font-size: var(--op-font-large);
     font-weight: var(--op-font-weight-medium);
   }
   
-  &.section--game-feed {
+  &.panel--game-feed {
     background-color: var(--op-color-primary-plus-eight);
     box-shadow: var(--op-border-left) var(--op-color-border);
     color: var(--op-color-primary-on-plus-eight);
   }
   
-  &.section--your-hand {
+  &.panel--your-hand {
     background-color: var(--op-color-neutral-plus-eight);
     color: var(--op-color-neutral-on-plus-eight);
   }
   
-  &.section--books {
+  &.panel--books {
     background-color: var(--op-color-neutral-plus-eight);
     box-shadow: var(--op-border-left) var(--op-color-border);
     color: var(--op-color-neutral-on-plus-eight);
   }
 }
 
-.section__header {
+.panel__header {
   align-items: center;
   box-shadow: var(--op-border-top) var(--op-color-border), var(--op-border-bottom) var(--op-color-border);
   display: flex;
   gap: var(--op-space-x-small);
   padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
   
-  &.section__header--expanded {
-    height: var(--op-space-4x-large);
-  }
-  
-  &.section__header--x-space-between {
+  &.panel__header--alt {
+    /* Panel Header Height: 60px */
+    --gf-panel-header-height: calc(var(--op-space-scale-unit) * 6);
+    
+    height: var(--gf-panel-header-height);
     justify-content: space-between;
   }
 }
 
-.section__body {
+.panel__body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   gap: var(--op-space-x-small);
-  padding: var(--op-space-medium);
+  padding: var(--op-space-3x-large) var(--op-space-3x-large) 0 var(--op-space-3x-large);
   
-  &.section__body--expanded {
-    flex-grow: 1;
-    padding: var(--op-space-3x-large) var(--op-space-3x-large) 0 var(--op-space-3x-large);
+  &.panel__body--alt {
+    padding: var(--op-space-medium);
   }
 }
 
-.section__footer {
+.panel__footer {
   display: flex;
   flex-direction: column;
   padding: var(--op-space-medium);
