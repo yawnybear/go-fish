@@ -1,5 +1,25 @@
+:root {
+  /*
+  Breakpoints
+  These breakpoint values will be used as a guide for media queries.
+  Annotate the uses with a comment above referring to the variable being referenced.
+
+  --op-breakpoint-small: 768px;
+  ...
+  */
+}
+
 .player-hand {
   display: flex;
+  flex-grow: 1;
+  gap: var(--op-space-small);
+}
+
+/* --op-breakpoint-small */
+@media (width < 768px) {
+  .player-hand {
+    flex-direction: column;
+  }
 }
 
 .game-card {
@@ -15,6 +35,7 @@
   box-shadow: var(--op-border-all) var(--op-color-neutral-plus-four), var(--op-shadow-small);
   color: var(--op-color-neutral-on-plus-eight);
   display: flex;
+  font-size: var(--op-font-small);
   height: var(--gf-game-card-height-large);
   margin-left: var(--gf-game-card-overlap-large);
   padding: var(--op-space-x-small) var(--op-space-small);
@@ -46,5 +67,14 @@
   
   &.card-stack--end {
     justify-content: end;
+  }
+}
+
+/* --op-breakpoint-small */
+@media (width < 768px) {
+  .card-stack {
+    &.card-stack--end {
+      justify-content: start;
+    }
   }
 }

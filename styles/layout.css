@@ -1,7 +1,26 @@
+:root {
+  /*
+  Breakpoints
+  These breakpoint values will be used as a guide for media queries.
+  Annotate the uses with a comment above referring to the variable being referenced.
+
+  --op-breakpoint-small: 768px;
+  ...
+  */
+}
+
 .app__body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 3fr 1fr;
+}
+
+/* --op-breakpoint-small */
+@media (width < 768px) {
+  .app__body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 .panel {
@@ -10,12 +29,14 @@
   font-size: var(--op-font-small);
   font-weight: var(--op-font-weight-medium);
   width: 100%;
+  z-index: var(--op-z-index-dialog-content);
   
   &.panel--game-board {
     background-color: var(--op-color-neutral-plus-max);
     color: var(--op-color-neutral-on-plus-max);
     font-size: var(--op-font-large);
     font-weight: var(--op-font-weight-medium);
+    overflow: scroll;
   }
   
   &.panel--game-feed {
@@ -39,16 +60,22 @@
 .panel__header {
   align-items: center;
   box-shadow: var(--op-border-top) var(--op-color-border), var(--op-border-bottom) var(--op-color-border);
+  background-color: var(--op-color-neutral-plus-max);
+  color: var(--op-color-neutral-on-plus-max);
   display: flex;
   gap: var(--op-space-x-small);
+  justify-content: space-between;
   padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
+  position: sticky;
+  top: 0;
+  z-index: var(--op-z-index-header);
   
   &.panel__header--alt {
     /* Panel Header Height: 60px */
     --gf-panel-header-height: calc(var(--op-space-scale-unit) * 6);
     
     height: var(--gf-panel-header-height);
-    justify-content: space-between;
+    background-color: var(--op-color-primary-plus-eight);
   }
 }
 
@@ -57,10 +84,23 @@
   flex-direction: column;
   flex-grow: 1;
   gap: var(--op-space-x-small);
-  padding: var(--op-space-3x-large) var(--op-space-3x-large) 0 var(--op-space-3x-large);
+  padding: var(--op-space-3x-large) var(--op-space-3x-large);
   
   &.panel__body--alt {
     padding: var(--op-space-medium);
+  }
+}
+
+/* --op-breakpoint-small */
+@media (width < 768px) {
+  .panel__body {
+    padding: var(--op-space-medium);
+    gap: var(--op-space-medium);
+    
+    &.panel__body--alt {
+      padding: var(--op-space-medium);
+      gap: var(--op-space-medium);
+    }
   }
 }
 
@@ -68,4 +108,18 @@
   display: flex;
   flex-direction: column;
   padding: var(--op-space-medium);
+}
+
+/* --op-breakpoint-small */
+@media (width < 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* --op-breakpoint-small */
+@media (width > 768px) {
+  .mobile-only {
+    display: none;
+  }
 }

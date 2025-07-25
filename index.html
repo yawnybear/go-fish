@@ -7,40 +7,109 @@
     <link rel="stylesheet" href="./styles/application.css">
   </head>
   <body class="app__body">
+    <button class="btn btn--icon btn--large btn--pill btn--primary btn--fab mobile-only"><span class="material-symbols-outlined icon"><a href="game-feed.html">Stacks</a></span></button>
     <section class="panel panel--game-board">
       <div class="panel__header">
-        <button class="btn btn--icon btn--pill btn--no-border"><span class="material-symbols-outlined icon">arrow_back</span></button>
-        <span>Game Board</span> 
+        <div class="panel__header--start">
+          <button class="btn btn--icon btn--pill btn--no-border"><span class="material-symbols-outlined icon">arrow_back</span></button>
+          <span>Game Board</span>
+        </div>
+        <div class="panel__header--end mobile-only">
+          <span class="badge badge--primary">Your Turn</span>
+        </div>
       </div>
       <div class="panel__body">
-        <span>Players</span>
         <details class="accordion">
           <summary>
             <span class="btn btn--icon btn--small btn--pill btn--no-border"><span class="material-symbols-outlined icon accordion__marker">arrow_right</span></span>
             <span class="accordion__label">Dominic</span>
-            <span class="accordion__label">Cards: 7</span>
+            <span class="accordion__label">Cards: 3</span>
             <span class="accordion__label">Books: 2</span>
           </summary>
           <div class="accordion__content">
             <div class="player-hand">
               <div class="card-stack card-stack--start">
-                <div class="game-card game-card--small"></div>
-                <div class="game-card game-card--small"></div>
-                <div class="game-card game-card--small"></div>
+                <div class="game-card"></div>
+                <div class="game-card"></div>
+                <div class="game-card"></div>
               </div>
               <div class="card-stack card-stack--end">
-                <div class="game-card game-card--small">A</div>
-                <div class="game-card game-card--small">J</div>
+                <div class="game-card">A</div>
+                <div class="game-card">J</div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>
+            <span class="btn btn--icon btn--small btn--pill btn--no-border"><span class="material-symbols-outlined icon accordion__marker">arrow_right</span></span>
+            <span class="accordion__label">Gabriel</span>
+            <span class="accordion__label">Cards: 2</span>
+            <span class="accordion__label">Books: 3</span>
+          </summary>
+          <div class="accordion__content">
+            <div class="player-hand">
+              <div class="card-stack card-stack--start">
+                <div class="game-card"></div>
+                <div class="game-card"></div>
+              </div>
+              <div class="card-stack card-stack--end">
+                <div class="game-card">5</div>
+                <div class="game-card">8</div>
+                <div class="game-card">9</div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>
+            <span class="btn btn--icon btn--small btn--pill btn--no-border"><span class="material-symbols-outlined icon accordion__marker">arrow_right</span></span>
+            <span class="accordion__label">Jullian</span>
+            <span class="accordion__label">Cards: 3</span>
+            <span class="accordion__label">Books: 1</span>
+          </summary>
+          <div class="accordion__content">
+            <div class="player-hand">
+              <div class="card-stack card-stack--start">
+                <div class="game-card"></div>
+                <div class="game-card"></div>
+                <div class="game-card"></div>
+              </div>
+              <div class="card-stack card-stack--end">
+                <div class="game-card">6</div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="accordion mobile-only">
+          <summary>
+            <span class="btn btn--icon btn--small btn--pill btn--no-border"><span class="material-symbols-outlined icon accordion__marker">arrow_right</span></span>
+            <span class="accordion__label">Parker (You)</span>
+            <span class="accordion__label">Hand: 4</span>
+            <span class="accordion__label">Books: 3</span>
+          </summary>
+          <div class="accordion__content">
+            <div class="player-hand">
+              <div class="card-stack card-stack--start">
+                <div class="game-card">Q</div>
+                <div class="game-card">K</div>
+                <div class="game-card">2</div>
+                <div class="game-card">9</div>
+              </div>
+              <div class="card-stack card-stack--end">
+                <div class="game-card">4</div>
+                <div class="game-card">7</div>
+                <div class="game-card">3</div>
               </div>
             </div>
           </div>
         </details>
       </div>
     </section>
-    <section class="panel panel--game-feed">
+    <section class="panel panel--game-feed desktop-only">
       <div class="panel__header panel__header--alt">
         <span>Game Feed</span>
-        <span class="badge badge--primary">Your Turn</span> 
+        <span class="badge badge--primary">Your Turn</span>
       </div>
       <div class="panel__body panel__body--alt">
         <span class="player-action">Jullian Asked Dominic for any 8s</span>
@@ -50,7 +119,7 @@
         </div>
         <div class="game-response">
           <span class="material-symbols-outlined icon">subdirectory_arrow_right</span>
-          <span class="game-response__notification">You drew a 7 of Diamonds</span>
+          <span class="game-response__notification">You drew a 7</span>
         </div>
       </div>
       <div class="panel__footer">
@@ -59,35 +128,26 @@
             <div class="form-group">
               <label class="form-label" for="player">Player</label>
               <select class="form-control form-control--small" name="player">
-                <option>Jullian</option>
                 <option>Dominic</option>
                 <option>Gabriel</option>
+                <option>Jullian</option>
               </select>
             </div>
             <div class="form-group">
               <label class="form-label" for="card-rank">Card Rank</label>
               <select class="form-control form-control--small" name="card-rank">
-                <option>Ace</option>
                 <option>Two</option>
-                <option>Three</option>
-                <option>Four</option>
-                <option>Five</option>
-                <option>Six</option>
-                <option>Seven</option>
-                <option>Eight</option>
-                <option>Nine</option>
                 <option>Ten</option>
-                <option>Jack</option>
                 <option>Queen</option>
                 <option>King</option>
               </select>
             </div>
           </div>
-          <button class="btn btn--primary btn--small">Ask Gabriel for Sevens</button>
+          <button class="btn btn--primary btn--small">Ask Jullian for Twos</button>
         </div> 
       </div>
     </section>
-    <section class="panel panel--your-hand">
+    <section class="panel panel--your-hand desktop-only">
       <div class="panel__header">
         <span>Your Hand</span> 
       </div>
@@ -99,20 +159,17 @@
             <div class="game-card">2</div>
             <div class="game-card">9</div>
           </div>
-          <div class="card-stack card-stack--end">
-            <div class="game-card">A</div>
-          </div>
         </div>
       </div>
     </section>
-    <section class="panel panel--books">
+    <section class="panel panel--books desktop-only">
       <div class="panel__header">
         <span>Books</span> 
       </div>
       <div class="panel__body panel__body--alt">
         <div class="player-hand">
           <div class="card-stack card-stack--start">
-            <div class="game-card">A</div>
+            <div class="game-card">4</div>
             <div class="game-card">7</div>
             <div class="game-card">3</div>
           </div>

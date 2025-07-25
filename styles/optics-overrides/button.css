@@ -1,0 +1,14 @@
+.btn--fab {
+  --gf-z-index-fab: 803;
+  
+  bottom: var(--op-space-x-large);
+  color: var(--op-color-primary-on-plus-max);
+  position: absolute;
+  right: var(--op-space-x-large);
+  z-index: var(--gf-z-index-fab);
+  
+  a {
+    color: var(--op-color-primary-on-min-max);
+    text-decoration: none;
+  }
+}

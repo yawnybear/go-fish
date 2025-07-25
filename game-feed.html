@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Go Fish</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/@rolemodel/optics/dist/css/optics.min.css">
+    <link rel="stylesheet" href="./styles/application.css">
+  </head>
+  <body class="app__body">
+    <section class="panel panel--game-feed">
+      <div class="panel__header panel__header--alt">
+        <span>Game Feed</span>
+        <button class="btn btn--pill"><a href="index.html"><span class="material-symbols-outlined icon">close</span></a></button>
+      </div>
+      <div class="panel__body panel__body--alt">
+        <span class="player-action">Jullian Asked Dominic for any 8s</span>
+        <div class="game-response">
+          <span class="material-symbols-outlined icon">subdirectory_arrow_right</span>
+          <span class="game-response__notification game-response__notification--warning">Go Fish: Dominic doesn’t have any 8s</span>
+        </div>
+        <div class="game-response">
+          <span class="material-symbols-outlined icon">subdirectory_arrow_right</span>
+          <span class="game-response__notification">You drew a 7</span>
+        </div>
+      </div>
+      <div class="panel__footer">
+        <div class="game-actions"> 
+          <div class="game-actions__options">
+            <div class="form-group">
+              <label class="form-label" for="player">Player</label>
+              <select class="form-control form-control--small" name="player">
+                <option>Dominic</option>
+                <option>Gabriel</option>
+                <option>Jullian</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="card-rank">Card Rank</label>
+              <select class="form-control form-control--small" name="card-rank">
+                <option>Two</option>
+                <option>Ten</option>
+                <option>Queen</option>
+                <option>King</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn--primary btn--small">Ask Jullian for Twos</button>
+        </div> 
+      </div>
+    </section>
+  </body>
+</html>
