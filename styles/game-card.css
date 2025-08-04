@@ -23,8 +23,8 @@
 }
 
 .game-card {
-  --gf-game-card-overlap-small: -3rem;
-  --gf-game-card-overlap-large: -8rem;
+  --gf-game-card-overlap-small: calc(var(--op-space-scale-unit) * 3 * -1);
+  --gf-game-card-overlap-large: calc(var(--op-space-scale-unit) * 8 * -1);
   --gf-game-card-height-small: calc(var(--op-space-scale-unit) * 8);
   --gf-game-card-height-large: calc(var(--op-space-scale-unit) * 16);
   --gf-game-card-width-small: calc(var(--op-space-scale-unit) * 6);
