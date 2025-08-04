@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="./styles/application.css">
   </head>
   <body class="app__body">
-    <button class="btn btn--icon btn--large btn--pill btn--primary btn--fab mobile-only"><span class="material-symbols-outlined icon"><a href="game-feed.html">Stacks</a></span></button>
+    <button class="btn btn--icon btn--large btn--pill btn--primary btn--fab"><span class="material-symbols-outlined icon"><a href="game-feed--mobile.html">Stacks</a></span></button>
     <section class="panel panel--game-board">
       <div class="panel__header">
         <div class="panel__header--start">
           <button class="btn btn--icon btn--pill btn--no-border"><span class="material-symbols-outlined icon">arrow_back</span></button>
           <span>Game Board</span>
         </div>
-        <div class="panel__header--end mobile-only">
+        <div class="panel__header--end">
           <span class="badge badge--primary">Your Turn</span>
         </div>
       </div>
-      <div class="panel__body">
+      <div class="panel__body panel__body--game-board">
         <details class="accordion">
           <summary>
             <span class="btn btn--icon btn--small btn--pill btn--no-border"><span class="material-symbols-outlined icon accordion__marker">arrow_right</span></span>
@@ -81,7 +81,7 @@
             </div>
           </div>
         </details>
-        <details class="accordion mobile-only">
+        <details class="accordion">
           <summary>
             <span class="btn btn--icon btn--small btn--pill btn--no-border"><span class="material-symbols-outlined icon accordion__marker">arrow_right</span></span>
             <span class="accordion__label">Parker (You)</span>
@@ -106,12 +106,12 @@
         </details>
       </div>
     </section>
-    <section class="panel panel--game-feed desktop-only">
-      <div class="panel__header panel__header--alt">
+    <section class="panel panel--game-feed">
+      <div class="panel__header panel__header--game-feed">
         <span>Game Feed</span>
         <span class="badge badge--primary">Your Turn</span>
       </div>
-      <div class="panel__body panel__body--alt">
+      <div class="panel__body">
         <span class="player-action">Jullian Asked Dominic for any 8s</span>
         <div class="game-response">
           <span class="material-symbols-outlined icon">subdirectory_arrow_right</span>
@@ -147,11 +147,11 @@
         </div> 
       </div>
     </section>
-    <section class="panel panel--your-hand desktop-only">
+    <section class="panel panel--your-hand">
       <div class="panel__header">
         <span>Your Hand</span> 
       </div>
-      <div class="panel__body panel__body--alt">
+      <div class="panel__body">
         <div class="player-hand">
           <div class="card-stack card-stack--start">
             <div class="game-card">K</div>
@@ -162,11 +162,11 @@
         </div>
       </div>
     </section>
-    <section class="panel panel--books desktop-only">
+    <section class="panel panel--books">
       <div class="panel__header">
         <span>Books</span> 
       </div>
-      <div class="panel__body panel__body--alt">
+      <div class="panel__body">
         <div class="player-hand">
           <div class="card-stack card-stack--start">
             <div class="game-card">4</div>
