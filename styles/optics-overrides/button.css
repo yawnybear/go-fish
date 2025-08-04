@@ -1,14 +1,34 @@
+:root {
+  /*
+  Breakpoints
+  These breakpoint values will be used as a guide for media queries.
+  Annotate the uses with a comment above referring to the variable being referenced.
+
+  --op-breakpoint-small: 768px;
+  ...
+  */
+}
+
 .btn--fab {
   --gf-z-index-fab: 803;
   
-  bottom: var(--op-space-x-large);
+  display: none;
+  
   color: var(--op-color-primary-on-plus-max);
   position: absolute;
+  bottom: var(--op-space-x-large);
   right: var(--op-space-x-large);
   z-index: var(--gf-z-index-fab);
   
   a {
     color: var(--op-color-primary-on-min-max);
     text-decoration: none;
+  }
+}
+
+/* --op-breakpoint-small */
+@media (width < 768px) {
+  .btn--fab {
+    display: block;
   }
 }
