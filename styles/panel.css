@@ -1,0 +1,142 @@
+:root {
+  /*
+  Breakpoints
+  These breakpoint values will be used as a guide for media queries.
+  Annotate the uses with a comment above referring to the variable being referenced.
+
+  --op-breakpoint-small: 768px;
+  ...
+  */
+}
+
+.panel {
+  display: grid;
+  flex-direction: column;
+  font-size: var(--op-font-small);
+  font-weight: var(--op-font-weight-medium);
+  width: 100%;
+  z-index: var(--op-z-index-dialog-content);
+  
+  &.panel--game-board {
+    background-color: var(--op-color-neutral-plus-max);
+    color: var(--op-color-neutral-on-plus-max);
+    font-size: var(--op-font-large);
+    font-weight: var(--op-font-weight-medium);
+    overflow: scroll;
+  }
+  
+  &.panel--game-feed {
+    background-color: var(--op-color-primary-plus-eight);
+    box-shadow: var(--op-border-left) var(--op-color-border);
+    color: var(--op-color-primary-on-plus-eight);
+  }
+  
+  &.panel--your-hand {
+    background-color: var(--op-color-neutral-plus-eight);
+    color: var(--op-color-neutral-on-plus-eight);
+  }
+  
+  &.panel--books {
+    background-color: var(--op-color-neutral-plus-eight);
+    box-shadow: var(--op-border-left) var(--op-color-border);
+    color: var(--op-color-neutral-on-plus-eight);
+  }
+  
+  &.panel--mobile {
+  }
+}
+
+/* --op-breakpoint-small */
+/* This hides these panels for the mobile implementation */
+@media (width < 768px) { 
+  .panel {
+    &.panel--game-feed, &.panel--your-hand, &.panel--books {
+      display: none;
+    }
+    
+    &.panel--game-feed.panel--mobile {
+      display: block;
+      display: flex;
+    }
+  }
+}
+
+.panel__header {
+  align-items: center;
+  box-shadow: var(--op-border-top) var(--op-color-border), var(--op-border-bottom) var(--op-color-border);
+  background-color: var(--op-color-neutral-plus-max);
+  color: var(--op-color-neutral-on-plus-max);
+  display: flex;
+  gap: var(--op-space-x-small);
+  justify-content: space-between;
+  padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
+  position: sticky;
+  top: 0;
+  z-index: var(--op-z-index-header);
+  
+  &.panel__header--game-feed {
+    /* Panel Header Height: 60px */
+    --gf-panel-header-height: calc(var(--op-space-scale-unit) * 6);
+    
+    height: var(--gf-panel-header-height);
+    background-color: var(--op-color-primary-plus-eight);
+  }
+}
+
+/* --op-breakpoint-small */
+@media (width > 768px) {
+  .panel__header {
+    .badge {
+      /* This hides the "Turn" badge for the desktop implementation */
+      display: none; 
+    }
+    
+    &.panel__header--game-feed {
+      .badge { 
+        /* This shows the "Turn" badge for the desktop implementation */
+        display: initial; 
+      }
+    }
+  }
+}
+
+.panel__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--op-space-x-small);
+  padding: var(--op-space-medium);
+  
+  &.panel__body--game-board {
+    padding: var(--op-space-3x-large) var(--op-space-3x-large);
+    
+    .accordion:last-child {
+      /* This hides the mobile implementation of "Your Hand" and "Books" */
+      display: none;
+    }
+  }
+}
+
+/* --op-breakpoint-small */
+@media (width < 768px) {
+  .panel__body {
+    padding: var(--op-space-medium);
+    gap: var(--op-space-medium);
+    
+    &.panel__body--game-board {
+      padding: var(--op-space-medium);
+      gap: var(--op-space-medium);
+      
+      .accordion:last-child {
+        /* This shows the mobile implementation of "Your Hand" and "Books" */
+        display: block;
+      }
+    }
+  }
+}
+
+.panel__footer {
+  display: flex;
+  flex-direction: column;
+  padding: var(--op-space-medium);
+}
