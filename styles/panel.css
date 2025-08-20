@@ -11,7 +11,8 @@
 
 .panel {
   display: grid;
-  flex-direction: column;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
   font-size: var(--op-font-small);
   font-weight: var(--op-font-weight-medium);
   width: 100%;
@@ -22,7 +23,7 @@
     color: var(--op-color-neutral-on-plus-max);
     font-size: var(--op-font-large);
     font-weight: var(--op-font-weight-medium);
-    overflow: scroll;
+    overflow-y: scroll;
   }
   
   &.panel--game-feed {
@@ -42,32 +43,33 @@
     color: var(--op-color-neutral-on-plus-eight);
   }
   
-  &.panel--mobile {
+  /* This feels like a rudimentary approach to declare it here and then in the breakpoint */
+  &.show-on-mobile {
+    display: grid;
   }
 }
 
 /* --op-breakpoint-small */
-/* This hides these panels for the mobile implementation */
+/* Hides panels for mobile implementation */
 @media (width < 768px) { 
   .panel {
     &.panel--game-feed, &.panel--your-hand, &.panel--books {
       display: none;
     }
     
-    &.panel--game-feed.panel--mobile {
-      display: block;
-      display: flex;
+    &.panel--game-feed.show-on-mobile {
+      display: grid;
     }
   }
 }
 
 .panel__header {
+  display: flex;
+  gap: var(--op-space-x-small);
   align-items: center;
   box-shadow: var(--op-border-top) var(--op-color-border), var(--op-border-bottom) var(--op-color-border);
   background-color: var(--op-color-neutral-plus-max);
   color: var(--op-color-neutral-on-plus-max);
-  display: flex;
-  gap: var(--op-space-x-small);
   justify-content: space-between;
   padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
   position: sticky;
@@ -80,6 +82,20 @@
     
     height: var(--gf-panel-header-height);
     background-color: var(--op-color-primary-plus-eight);
+    color: var(--op-color-primary-on-plus-eight-alt);
+    position: relative;
+  }
+  
+  &.panel__header--your-hand {
+     background-color: var(--op-color-neutral-plus-eight);
+     color: var(--op-color-neutral-on-plus-eight-alt);
+     left: 0;
+  }
+  
+  &.panel__header--books {
+     background-color: var(--op-color-neutral-plus-eight);
+     color: var(--op-color-neutral-on-plus-eight-alt);
+     left: 0;
   }
 }
 
@@ -87,14 +103,14 @@
 @media (width > 768px) {
   .panel__header {
     .badge {
-      /* This hides the "Turn" badge for the desktop implementation */
+      /* Hides "Your Turn" badge for desktop implementation */
       display: none; 
     }
     
     &.panel__header--game-feed {
       .badge { 
-        /* This shows the "Turn" badge for the desktop implementation */
-        display: initial; 
+        /* Shows "Your Turn" badge for desktop implementation */
+        display: block;
       }
     }
   }
@@ -103,17 +119,26 @@
 .panel__body {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   gap: var(--op-space-x-small);
   padding: var(--op-space-medium);
+  overflow-y: scroll;
   
   &.panel__body--game-board {
+    font-size: var(--op-font-small);
     padding: var(--op-space-3x-large) var(--op-space-3x-large);
     
     .accordion:last-child {
       /* This hides the mobile implementation of "Your Hand" and "Books" */
       display: none;
     }
+  }
+  
+  &.panel__body--your-hand {
+    overflow-x: scroll;
+  }
+  
+  &.panel__body--books {
+    overflow-x: scroll;
   }
 }
 
@@ -139,4 +164,6 @@
   display: flex;
   flex-direction: column;
   padding: var(--op-space-medium);
+  position: sticky;
+  bottom: 0;
 }

@@ -19,6 +19,7 @@
         </div>
       </div>
       <div class="panel__body panel__body--game-board">
+        <span>Players</span>
         <details class="accordion">
           <summary>
             <span class="btn btn--icon btn--small btn--pill btn--no-border"><span class="material-symbols-outlined icon accordion__marker">arrow_right</span></span>
@@ -28,11 +29,13 @@
           </summary>
           <div class="accordion__content">
             <div class="player-hand">
+              <span class="player-hand__label">Cards: 3</span>
               <div class="card-stack card-stack--start">
                 <div class="game-card"></div>
                 <div class="game-card"></div>
                 <div class="game-card"></div>
               </div>
+              <span class="player-hand__label">Books: 2</span>
               <div class="card-stack card-stack--end">
                 <div class="game-card">A</div>
                 <div class="game-card">J</div>
@@ -49,10 +52,12 @@
           </summary>
           <div class="accordion__content">
             <div class="player-hand">
+              <span class="player-hand__label">Cards: 2</span>
               <div class="card-stack card-stack--start">
                 <div class="game-card"></div>
                 <div class="game-card"></div>
               </div>
+              <span class="player-hand__label">Books: 3</span>
               <div class="card-stack card-stack--end">
                 <div class="game-card">5</div>
                 <div class="game-card">8</div>
@@ -70,11 +75,13 @@
           </summary>
           <div class="accordion__content">
             <div class="player-hand">
+              <span class="player-hand__label">Cards: 3</span>
               <div class="card-stack card-stack--start">
                 <div class="game-card"></div>
                 <div class="game-card"></div>
                 <div class="game-card"></div>
               </div>
+              <span class="player-hand__label">Books: 1</span>
               <div class="card-stack card-stack--end">
                 <div class="game-card">6</div>
               </div>
@@ -90,12 +97,14 @@
           </summary>
           <div class="accordion__content">
             <div class="player-hand">
+              <span class="player-hand__label">Hand: 4</span>
               <div class="card-stack card-stack--start">
                 <div class="game-card">Q</div>
                 <div class="game-card">K</div>
                 <div class="game-card">2</div>
                 <div class="game-card">9</div>
               </div>
+              <span class="player-hand__label">Books: 3</span>
               <div class="card-stack card-stack--end">
                 <div class="game-card">4</div>
                 <div class="game-card">7</div>
@@ -148,10 +157,10 @@
       </div>
     </section>
     <section class="panel panel--your-hand">
-      <div class="panel__header">
+      <div class="panel__header panel__header--your-hand">
         <span>Your Hand</span> 
       </div>
-      <div class="panel__body">
+      <div class="panel__body panel__body--your-hand">
         <div class="player-hand">
           <div class="card-stack card-stack--start">
             <div class="game-card">K</div>
@@ -163,10 +172,10 @@
       </div>
     </section>
     <section class="panel panel--books">
-      <div class="panel__header">
+      <div class="panel__header panel__header--books">
         <span>Books</span> 
       </div>
-      <div class="panel__body">
+      <div class="panel__body panel__body--books">
         <div class="player-hand">
           <div class="card-stack card-stack--start">
             <div class="game-card">4</div>

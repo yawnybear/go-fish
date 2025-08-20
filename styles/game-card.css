@@ -37,7 +37,7 @@
   display: flex;
   font-size: var(--op-font-small);
   height: var(--gf-game-card-height-large);
-  margin-left: var(--gf-game-card-overlap-large);
+  margin-inline-start: var(--gf-game-card-overlap-large);
   padding: var(--op-space-x-small) var(--op-space-small);
   width: var(--gf-game-card-width-large);
 
@@ -45,7 +45,7 @@
     box-shadow: var(--op-border-all) var(--op-color-neutral-plus-four), var(--op-shadow-x-small);
     font-size: var(--op-font-x-small);
     height: var(--gf-game-card-height-small);
-    margin-left: var(--gf-game-card-overlap-small);
+    margin-inline-start: var(--gf-game-card-overlap-small);
     padding: var(--op-space-3x-small) var(--op-space-2x-small);
     width: var(--gf-game-card-width-small);
   }
@@ -63,10 +63,12 @@
   
   &.card-stack--start {
     justify-content: start;
+    padding-inline-end: var(--op-space-medium);
   }
   
   &.card-stack--end {
     justify-content: end;
+    padding-inline-start: var(--op-space-medium);
   }
 }
 
