@@ -1,0 +1,24 @@
+.btn--fab {
+  --gf-z-index-fab: 803;
+  /* Button Fab Size: 50px */
+  --gf-button-size: calc(var(--op-space-scale-unit) * 5);
+  
+  display: none;
+  
+  align-content: center;
+  border-radius: var(--op-radius-circle);
+  color: var(--op-color-primary-on-plus-max);
+  height: var(--gf-button-size);
+  width: var(--gf-button-size);
+  position: absolute;
+  inset-block-end: var(--op-space-x-large);
+  inset-inline-end: var(--op-space-x-large);
+  z-index: var(--gf-z-index-fab);
+}
+
+/* --op-breakpoint-small */
+@media (width < 768px) {
+  .btn--fab {
+    display: block;
+  }
+}

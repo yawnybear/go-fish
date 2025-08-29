@@ -1,0 +1,157 @@
+.panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  font-size: var(--op-font-small);
+  font-weight: var(--op-font-weight-medium);
+  width: 100%;
+  z-index: var(--op-z-index-dialog-content);
+  
+  &.panel--game-board {
+    background-color: var(--op-color-neutral-plus-max);
+    color: var(--op-color-neutral-on-plus-max);
+    font-size: var(--op-font-large);
+    font-weight: var(--op-font-weight-medium);
+    overflow-y: scroll;
+  }
+  
+  &.panel--game-feed {
+    background-color: var(--op-color-primary-plus-eight);
+    box-shadow: var(--op-border-left) var(--op-color-border);
+    color: var(--op-color-primary-on-plus-eight);
+  }
+  
+  &.panel--your-hand {
+    background-color: var(--op-color-neutral-plus-eight);
+    color: var(--op-color-neutral-on-plus-eight);
+  }
+  
+  &.panel--books {
+    background-color: var(--op-color-neutral-plus-eight);
+    box-shadow: var(--op-border-left) var(--op-color-border);
+    color: var(--op-color-neutral-on-plus-eight);
+  }
+  
+  &.show-on-mobile {
+    display: grid;
+  }
+  
+  .panel__header {
+    display: flex;
+    gap: var(--op-space-x-small);
+    align-items: center;
+    box-shadow: var(--op-border-top) var(--op-color-border), var(--op-border-bottom) var(--op-color-border);
+    background-color: var(--op-color-neutral-plus-max);
+    color: var(--op-color-neutral-on-plus-max);
+    justify-content: space-between;
+    padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
+    position: sticky;
+    top: 0;
+    z-index: var(--op-z-index-header);
+    
+    &.panel__header--game-feed {
+      /* Panel Header Height: 60px */
+      --gf-panel-header-height: calc(var(--op-space-scale-unit) * 6);
+      
+      height: var(--gf-panel-header-height);
+      background-color: var(--op-color-primary-plus-eight);
+      color: var(--op-color-primary-on-plus-eight-alt);
+      position: relative;
+    }
+    
+    &.panel__header--your-hand {
+       background-color: var(--op-color-neutral-plus-eight);
+       color: var(--op-color-neutral-on-plus-eight-alt);
+       left: 0;
+    }
+    
+    &.panel__header--books {
+       background-color: var(--op-color-neutral-plus-eight);
+       color: var(--op-color-neutral-on-plus-eight-alt);
+       left: 0;
+    }
+  }
+  
+  .panel__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--op-space-x-small);
+    padding: var(--op-space-medium);
+    overflow-y: scroll;
+    
+    &.panel__body--game-board {
+      font-size: var(--op-font-small);
+      padding: var(--op-space-3x-large) var(--op-space-3x-large);
+      
+      .accordion:last-child {
+        /* This hides the mobile implementation of "Your Hand" and "Books" */
+        display: none;
+      }
+    }
+    
+    &.panel__body--your-hand {
+      overflow-x: scroll;
+    }
+    
+    &.panel__body--books {
+      overflow-x: scroll;
+    }
+  }
+  
+  .panel__footer {
+    display: flex;
+    flex-direction: column;
+    padding: var(--op-space-medium);
+    position: sticky;
+    bottom: 0;
+  }
+}
+
+
+/* Hides panels for mobile implementation */
+/* --op-breakpoint-small */
+@media (width < 768px) { 
+  .panel {
+    &.panel--game-feed, &.panel--your-hand, &.panel--books {
+      display: none;
+    }
+    
+    &.panel--game-feed.show-on-mobile {
+      display: grid;
+    }
+  }
+   
+  .panel {
+    .panel__body {
+      padding: var(--op-space-medium);
+      gap: var(--op-space-medium);
+      
+      &.panel__body--game-board {
+        padding: var(--op-space-medium);
+        gap: var(--op-space-medium);
+        
+        .accordion:last-child {
+          /* This shows the mobile implementation of "Your Hand" and "Books" */
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/* --op-breakpoint-small */
+@media (width > 768px) {
+  .panel__header {
+    .badge {
+      /* Hides "Your Turn" badge for desktop implementation */
+      display: none; 
+    }
+    
+    &.panel__header--game-feed {
+      .badge { 
+        /* Shows "Your Turn" badge for desktop implementation */
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.player-hand {
+  display: flex;
+  flex-grow: 1;
+  gap: var(--op-space-small);
+  
+  .player-hand__label {
+    display: none;
+    font-size: var(--op-font-medium);
+    font-weight: var(--op-font-weight-normal);
+  }
+}
+
+/* --op-breakpoint-small */
+@media (width < 768px) {
+  .player-hand {
+    flex-direction: column;
+  }
+}

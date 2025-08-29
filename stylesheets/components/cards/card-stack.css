@@ -1,0 +1,29 @@
+.card-stack {
+  /* General Stack Layout */
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  
+  :first-child {
+    margin: 0;
+  }
+  
+  &.card-stack--start {
+    justify-content: start;
+    padding-inline-end: var(--op-space-medium);
+  }
+  
+  &.card-stack--end {
+    justify-content: end;
+    padding-inline-start: var(--op-space-medium);
+  }
+}
+
+/* --op-breakpoint-small */
+@media (width < 768px) {
+  .card-stack {
+    &.card-stack--end {
+      justify-content: start;
+    }
+  }
+}

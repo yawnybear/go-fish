@@ -1,27 +1,3 @@
-:root {
-  /*
-  Breakpoints
-  These breakpoint values will be used as a guide for media queries.
-  Annotate the uses with a comment above referring to the variable being referenced.
-
-  --op-breakpoint-small: 768px;
-  ...
-  */
-}
-
-.player-hand {
-  display: flex;
-  flex-grow: 1;
-  gap: var(--op-space-small);
-}
-
-/* --op-breakpoint-small */
-@media (width < 768px) {
-  .player-hand {
-    flex-direction: column;
-  }
-}
-
 .game-card {
   --gf-game-card-overlap-small: calc(var(--op-space-scale-unit) * 3 * -1);
   --gf-game-card-overlap-large: calc(var(--op-space-scale-unit) * 8 * -1);
@@ -48,35 +24,5 @@
     margin-inline-start: var(--gf-game-card-overlap-small);
     padding: var(--op-space-3x-small) var(--op-space-2x-small);
     width: var(--gf-game-card-width-small);
-  }
-}
-
-.card-stack {
-  /* General Stack Layout */
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  
-  :first-child {
-    margin: 0;
-  }
-  
-  &.card-stack--start {
-    justify-content: start;
-    padding-inline-end: var(--op-space-medium);
-  }
-  
-  &.card-stack--end {
-    justify-content: end;
-    padding-inline-start: var(--op-space-medium);
-  }
-}
-
-/* --op-breakpoint-small */
-@media (width < 768px) {
-  .card-stack {
-    &.card-stack--end {
-      justify-content: start;
-    }
   }
 }
